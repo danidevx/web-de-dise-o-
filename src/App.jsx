@@ -1,5 +1,12 @@
 import React from "react";
 
+// Importar imágenes para que Vite las copie al build
+import brandSystemImg from "./assets/brand-system.jpg";
+import productUiImg from "./assets/product-ui.jpg";
+import motionDesignImg from "./assets/motion-design.jpg";
+import webPlatformImg from "./assets/web-platform.jpg";
+import aboutTeamImg from "./assets/about-team.jpg";
+
 /**
  * App.jsx
  * Componente React que reproduce visualmente una landing "inspirada" en radaville.studio
@@ -136,7 +143,7 @@ function Hero() {
           >
             {/* capa de fondo con efecto flotante */}
             <div className="relative w-full h-full rounded-2xl overflow-hidden">
-              <img src="/src/assets/brand-system.jpg" alt="Project preview" className="img-cover"/>
+              <img src={brandSystemImg} alt="Project preview" className="img-cover"/>
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
               <div className="absolute left-4 bottom-4 text-white">
                 <div className="text-xs uppercase tracking-wide text-slate-200">Project</div>
@@ -167,10 +174,10 @@ function Stat({ value, label }) {
 /* ---------------- Work / Grid ---------------- */
 function WorkShowcase() {
   const projects = [
-    { id: 1, title: "Brand system", desc: "Identidad y UX", img: "/src/assets/brand-system.jpg" },
-    { id: 2, title: "Product UI", desc: "Interfaz & flows", img: "/src/assets/product-ui.jpg" },
-    { id: 3, title: "Motion design", desc: "Animación y 3D", img: "/src/assets/motion-design.jpg" },
-    { id: 4, title: "Web platform", desc: "Front + Back", img: "/src/assets/web-platform.jpg" }
+    { id: 1, title: "Brand system", desc: "Identidad y UX", img: brandSystemImg },
+    { id: 2, title: "Product UI", desc: "Interfaz & flows", img: productUiImg },
+    { id: 3, title: "Motion design", desc: "Animación y 3D", img: motionDesignImg },
+    { id: 4, title: "Web platform", desc: "Front + Back", img: webPlatformImg }
   ];
 
   return (
@@ -232,7 +239,7 @@ function AboutSection() {
 
       <div className="relative">
         <div className="w-full h-72 rounded-2xl overflow-hidden card-3d">
-          <img src="/src/assets/about-team.jpg" alt="about" className="img-cover"/>
+          <img src={aboutTeamImg} alt="about" className="img-cover"/>
         </div>
       </div>
     </section>
